@@ -1,0 +1,92 @@
+GET http://localhost:8000/mascotas/buscarMascota HTTP/1.1
+
+###
+GET http://localhost:8000/mascotas/buscarGatos HTTP/1.1
+
+
+###
+GET http://localhost:8000/mascotas/buscarperros HTTP/1.1
+
+###
+GET http://localhost:8000/mascotas/buscarMascotasDiponibles HTTP/1.1
+
+###
+POST http://localhost:8000/mascotas/crearMascota HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_mascota": 121,
+    "nombre": "Mateo",
+    "tipo": "gato",
+    "edad": 3,
+    "descripcion": "Un perro jugueton",
+    "disponible": false,
+    "imagen": "rectora.png"
+}
+
+###
+GET http://localhost:8000/mascotas/buscarMascota/125 HTTP/1.1
+
+###
+PUT http://localhost:8000/mascotas/actualizarMascota/166 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre":"Max",
+    "edad":10
+}
+
+###
+DELETE http://localhost:8000/mascotas/eliminarMascota/13 HTTP/1.1
+
+#Rutas solicitud 
+
+###
+POST http://localhost:8000/solicitudes/crearSolicitud HTTP/1.1
+Content-Type: application/json
+
+{
+    "id_Solicitud": 154,
+    "idMascota": 1269,
+    "nombreSolicitante": "Fredy",
+    "correoSolicitante": "FREDY@gmail.com"
+}
+
+
+###
+GET http://localhost:8000/solicitudes/buscarIdSolicitud/11 HTTP/1.1
+
+
+###
+GET http://localhost:8000/solicitudes/buscarSolicitudes HTTP/1.1
+
+###
+GET http://localhost:8000/solicitudes/buscarSolicitudesPendientes HTTP/1.1
+
+###
+GET http://localhost:8000/solicitudes/buscarSolicitudesAceptada HTTP/1.1
+
+
+###
+GET http://localhost:8000/solicitudes/buscarSolicitudesRechazada HTTP/1.1
+
+###
+PUT http://localhost:8000/solicitudes/actualizarSolicitud/14 HTTP/1.1
+Content-Type: application/json
+
+{
+    "idMascota": 1212,
+    "nombreSolicitante": "Daniel Getial",
+    "correoSolicitante": "FREDY@gmail.com",
+    "estadoSolicitud": "aceptada"
+}
+
+###
+DELETE http://localhost:8000/solicitudes/eliminarSolicitud/12 HTTP/1.1
+
+
+###
+PUT http://localhost:8000/solicitudes/aceptarSolicitud/124 HTTP/1.1
+
+###
+PUT http://localhost:8000/solicitudes/rechazarSolicitud/154 HTTP/1.1
